@@ -6,5 +6,5 @@ public interface IRepository<T ,Id> {
     T save(T t);
     Optional <T> read(Id id);
     T update(T t);
-    void delete(Id id);
+    void delete(T t);
 }
