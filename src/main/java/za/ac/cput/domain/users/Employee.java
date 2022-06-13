@@ -6,13 +6,13 @@
  */
 package za.ac.cput.domain.users;
 
-import javax.lang.model.element.Name;
+import za.ac.cput.domain.userInfo.Name;
 
 public class Employee {
-    private String staffId, email;
-    private Name name;
+    private final String staffId, email;
+    private final Name name;
 
-    public Employee(EmployeeBuilder employeeBuilder) {
+    private Employee(EmployeeBuilder employeeBuilder) {
         this.staffId = employeeBuilder.staffId;
         this.email = employeeBuilder.email;
         this.name = employeeBuilder.name;
@@ -28,6 +28,15 @@ public class Employee {
 
     public Name getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "staffId='" + staffId + '\'' +
+                ", email='" + email + '\'' +
+                ", name=" + name +
+                '}';
     }
 
     public static class EmployeeBuilder{

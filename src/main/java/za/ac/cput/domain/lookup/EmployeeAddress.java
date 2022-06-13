@@ -9,10 +9,10 @@ package za.ac.cput.domain.lookup;
 import za.ac.cput.domain.location.Address;
 
 public class EmployeeAddress {
-    private String staffId;
-    private Address address;
+    private final String staffId;
+    private final Address address;
 
-    public EmployeeAddress(EmployeeAddressBuilder employeeAddressBuilder) {
+    private EmployeeAddress(EmployeeAddressBuilder employeeAddressBuilder) {
         this.staffId = employeeAddressBuilder.staffId;
         this.address = employeeAddressBuilder.address;
     }
@@ -23,6 +23,14 @@ public class EmployeeAddress {
 
     public Address getAddress() {
         return address;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeAddress{" +
+                "staffId='" + staffId + '\'' +
+                ", address=" + address +
+                '}';
     }
 
     public static class EmployeeAddressBuilder{
