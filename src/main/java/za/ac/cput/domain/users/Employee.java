@@ -6,7 +6,7 @@
  */
 package za.ac.cput.domain.users;
 
-import za.ac.cput.domain.user_info.Name;
+import javax.lang.model.element.Name;
 
 public class Employee {
     private String staffId, email;
