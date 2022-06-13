@@ -1,8 +1,10 @@
 package za.ac.cput.repository;
 
+import java.util.Optional;
+
 public interface IRepository<T ,Id> {
     T save(T t);
-    T read(Id id);
+    Optional <T> read(Id id);
     T update(T t);
     void delete(Id id);
 }
