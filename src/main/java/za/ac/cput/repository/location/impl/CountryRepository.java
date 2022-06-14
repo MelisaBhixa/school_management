@@ -1,6 +1,5 @@
 package za.ac.cput.repository.location.impl;
 
-<<<<<<< 217217095
 import za.ac.cput.domain.location.Country;
 import za.ac.cput.repository.location.ICountryRepository;
 
@@ -76,8 +75,3 @@ public class CountryRepository implements ICountryRepository {
                 .collect(Collectors.toList());
     }
 }
-
-=======
-public class CountryRepository {
-}
->>>>>>> master
