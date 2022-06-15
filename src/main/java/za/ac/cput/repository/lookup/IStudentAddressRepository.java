@@ -1,4 +1,17 @@
+/**
+ IStudentAddressRepository.java
+ Entity for IStudentAddressRepository
+ Author: Zuko Fukula (217299911)
+ Date: 13 June 2022
+ */
+
+
 package za.ac.cput.repository.lookup;
 
-public interface IStudentAddressRepository {
+import za.ac.cput.domain.lookup.StudentAddress;
+import za.ac.cput.repository.IRepository;
+import java.util.Set;
+
+public interface IStudentAddressRepository extends IRepository<StudentAddress, String> {
+    Set<StudentAddress> getAll();
 }
