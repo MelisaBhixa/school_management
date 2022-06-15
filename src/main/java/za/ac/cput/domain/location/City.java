@@ -17,6 +17,9 @@ public class City {
         this.country = cityBuilder.country;
     }
 
+    public City() {
+    }
+
     public String getId() {
         return id;
     }
