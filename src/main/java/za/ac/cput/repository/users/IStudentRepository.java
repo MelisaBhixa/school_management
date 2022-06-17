@@ -10,8 +10,8 @@ package za.ac.cput.repository.users;
 
 import za.ac.cput.domain.users.Student;
 import za.ac.cput.repository.IRepository;
-import java.util.Set;
+import java.util.List;
 
 public interface IStudentRepository extends IRepository<Student, String> {
-    Set<Student> getAll();
+    List<Student> getAll();
 }

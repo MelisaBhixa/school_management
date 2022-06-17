@@ -10,8 +10,8 @@ package za.ac.cput.repository.lookup;
 
 import za.ac.cput.domain.lookup.StudentAddress;
 import za.ac.cput.repository.IRepository;
-import java.util.Set;
+import java.util.List;
 
 public interface IStudentAddressRepository extends IRepository<StudentAddress, String> {
-    Set<StudentAddress> getAll();
+    List<StudentAddress> getAll();
 }
