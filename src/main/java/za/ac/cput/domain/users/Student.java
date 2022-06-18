@@ -11,20 +11,20 @@ import za.ac.cput.domain.userInfo.Name;
 
 public class Student {
 
-    public String studentID;
-    public String email;
-    public Name name;
+    private String studentId;
+    private String email;
+    private Name name;
 
 
     public Student(Student.Builder builder) {
 
-        this.studentID = builder.studentID;
+        this.studentId = builder.studentId;
         this.email = builder.email;
         this.name = builder.name;
     }
 
-    public String getStudentID() {
-        return studentID;
+    public String getStudentId() {
+        return studentId;
     }
 
     public String getEmail() {
@@ -37,12 +37,12 @@ public class Student {
 
     public static class Builder {
 
-        private String studentID;
+        private String studentId;
         private String email;
         private Name name;
 
-        public Student.Builder setStudentID(String studentID) {
-            this.studentID = studentID;
+        public Student.Builder setStudentId(String studentId) {
+            this.studentId = studentId;
             return this;
         }
 
@@ -61,7 +61,7 @@ public class Student {
         }
 
         public Student.Builder copy(Student student) {
-            this.studentID = student.studentID;
+            this.studentId = student.studentId;
             this.email = student.email;
             this.name = student.name;
             return this;
@@ -73,7 +73,7 @@ public class Student {
         public String toString() {
             return "StudentAddress{" +
                     ", name ='" + name + '\'' +
-                    "studentID='" + studentID + '\'' +
+                    "studentId='" + studentId + '\'' +
                     ", email ='" + email + '\'' +
                     '}';
 

@@ -13,10 +13,10 @@ import za.ac.cput.util.Helper;
 
 public class StudentFactory {
 
-    public static Student newStudent(String studentID, String email, Name name) {
-        Helper.checkStringParam("studentID", studentID);
+    public static Student newStudent(String studentId, String email, Name name) {
+        Helper.checkStringParam("studentId", studentId);
         Helper.checkStringParam("email", email);
 
-        return new Student.Builder().setStudentID(studentID).setEmail(email).setName(name).build();
+        return new Student.Builder().setStudentId(studentId).setEmail(email).setName(name).build();
     }
 }

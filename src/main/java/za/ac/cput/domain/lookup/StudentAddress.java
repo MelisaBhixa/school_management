@@ -11,19 +11,17 @@ import za.ac.cput.domain.location.Address;
 
 public class StudentAddress{
 
-    public String studentID;
-    public Address address;
+    private String studentId;
+    private Address address;
 
 
     public StudentAddress(Builder builder) {
 
-        this.studentID = builder.studentID;
+        this.studentId = builder.studentId;
         this.address = builder.address;
     }
 
-    public String getStudentID() {
-        return studentID;
-    }
+    public String getStudentID() { return studentId; }
 
     public Address getAddress() {
         return address;
@@ -31,11 +29,11 @@ public class StudentAddress{
 
     public static class Builder {
 
-        private String studentID;
+        private String studentId;
         private Address address;
 
         public StudentAddress.Builder setStudentID(String studentID) {
-            this.studentID = studentID;
+            this.studentId = studentID;
             return this;
         }
 
@@ -49,7 +47,7 @@ public class StudentAddress{
         }
 
         public StudentAddress.Builder copy(StudentAddress studentAddress) {
-            this.studentID = studentAddress.studentID;
+            this.studentId = studentAddress.studentId;
             this.address = studentAddress.address;
             return this;
 
@@ -59,7 +57,7 @@ public class StudentAddress{
 
         public String toString() {
             return "StudentAddress{" +
-                    "studentID='" + studentID + '\'' +
+                    "studentID='" + studentId + '\'' +
                     ", address ='" + address + '\'' +
                     '}';
 

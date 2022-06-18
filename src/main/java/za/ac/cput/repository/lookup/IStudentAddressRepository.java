@@ -8,10 +8,11 @@
 
 package za.ac.cput.repository.lookup;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.lookup.StudentAddress;
-import za.ac.cput.repository.IRepository;
-import java.util.List;
 
-public interface IStudentAddressRepository extends IRepository<StudentAddress, String> {
-    List<StudentAddress> getAll();
+@Repository
+public interface IStudentAddressRepository extends JpaRepository<StudentAddress, String> {
+
 }

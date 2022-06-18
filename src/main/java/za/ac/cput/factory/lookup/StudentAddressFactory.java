@@ -13,11 +13,11 @@ import za.ac.cput.util.Helper;
 
 public class StudentAddressFactory {
 
-    public static StudentAddress newStudentAddress(String studentID, Address address){
-        Helper.checkStringParam("studentID", studentID);
+    public static StudentAddress newStudentAddress(String studentId, Address address){
+        Helper.checkStringParam("studentId", studentId);
         Helper.isObjectNull(address);
 
-    return new StudentAddress.Builder().setStudentID(studentID).setAddress(address).build();
+    return new StudentAddress.Builder().setStudentID(studentId).setAddress(address).build();
 
 
     }
