@@ -8,9 +8,20 @@ package za.ac.cput.domain.users;
 
 import za.ac.cput.domain.userInfo.Name;
 
-public class Employee {
-    private final String staffId, email;
-    private final Name name;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
+import java.util.Objects;
+
+@Entity
+public class Employee implements Serializable{
+    @NotNull @Id private String staffId;
+    @NotNull private String email;
+    @Embedded
+    private Name name;
+
+    protected Employee(){
+    }
 
     private Employee(EmployeeBuilder employeeBuilder) {
         this.staffId = employeeBuilder.staffId;
@@ -64,6 +75,19 @@ public class Employee {
             this.email = employee.email;
             this.name = employee.name;
             return this;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            EmployeeBuilder that = (EmployeeBuilder) o;
+            return staffId.equals(that.staffId);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(staffId);
         }
 
         public Employee build(){
