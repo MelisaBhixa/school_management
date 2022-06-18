@@ -18,10 +18,10 @@ public class Name {
     protected Name() {
     }
 
-    private Name(Builder builder) {
-        this.firstName = builder.firstName;
-        this.middleName = builder.middleName;
-        this.lastName = builder.lastName;
+    private Name(NameBuilder nameBuilder) {
+        this.firstName = nameBuilder.firstName;
+        this.middleName = nameBuilder.middleName;
+        this.lastName = nameBuilder.lastName;
 
     }
 
@@ -59,26 +59,26 @@ public class Name {
     }
 
 
-    public static class Builder {
+    public static class NameBuilder {
 
         private String firstName, middleName, lastName;
 
-        public Builder firstName(String firstName) {
+        public NameBuilder firstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder middleName(String middleName) {
+        public NameBuilder middleName(String middleName) {
             this.middleName = middleName;
             return this;
         }
 
-        public Builder lastName(String lastName) {
+        public NameBuilder lastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Builder copy(Name name) {
+        public NameBuilder copy(Name name) {
             this.firstName = name.firstName;
             this.middleName = name.middleName;
             this.lastName = name.lastName;
