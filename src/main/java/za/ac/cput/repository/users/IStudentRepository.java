@@ -8,10 +8,11 @@
 
 package za.ac.cput.repository.users;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.users.Student;
-import za.ac.cput.repository.IRepository;
-import java.util.List;
 
-public interface IStudentRepository extends IRepository<Student, String> {
-    List<Student> getAll();
+@Repository
+public interface IStudentRepository extends JpaRepository<Student, String> {
+
 }
